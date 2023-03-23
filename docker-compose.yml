@@ -4,7 +4,7 @@ version: '3'
 services:
  # laravelを動かすコンテナがここから下に記載されています。
  app:
-   #コンテナの名前をここで決めます。
+   #コンテナの名前をここで決めます。プロジェクトごとに編集。
    container_name: laravel_app
    # どのポートを繋ぐかという設定です。ホストの8080番ポートとコンテナの８０番をつないでいる。80番ポートのバーチャルホストは000-default.confにて設定済みです。
    ports:
@@ -18,7 +18,7 @@ services:
  db:
    #Docker HubからMySQL5.7の公式イメージを引っ張ってくる設定です。
    image: mysql:5.7
-   # コンテナ名を指定しています。
+   # コンテナ名を指定しています。プロジェクトごとに編集。
    container_name: laravel_db
    # MySQLのコンテナ内の環境変数を指定しています。任意のものを設定してください。
    environment:
@@ -38,7 +38,7 @@ services:
      - 13306:3306
  # phpmyadminの設定が書きに記載します。
  phpmyadmin:
-   #コンテナ名を決めています。
+   #コンテナ名を決めています。プロジェクトごとに編集。
    container_name: phpmyadmin
    #DockerHubからphpmyadminのイメージを引っ張ってくる設定です。
    image: phpmyadmin/phpmyadmin
